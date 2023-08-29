@@ -1,0 +1,33 @@
+@import '../styles/colors.scss';
+
+// Style Fonts
+$size-12: 12px;
+$size-14: 14px;
+$size-16: 16px;
+$default-line-height: 140%;
+$weight-regular: 400;
+$weight-bold: 700;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// :focus {
+//     outline: transparent;
+//     box-shadow: 0 0 0 2px $green;
+// }
+
+body {
+    background-color: $gray-600;
+    color: $gray-300;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
