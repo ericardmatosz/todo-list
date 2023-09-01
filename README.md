@@ -7,7 +7,7 @@
 </div>
 
 This project was developed to put into practice some knowledge acquired during the Rocketseat Ignite course.
-This project is a list of tasks, where the user can create, delete and complete their activities.
+This project is a to-do list, where the user can create, delete, and complete their activities.
 
 
 
@@ -26,11 +26,15 @@ The project has the following <strong>features</strong>:
 - Monitor the status of your tasks
 
 ## 🎨 Layout
-Desktop and Mobile version visualization
+Desktop and Mobile version visualization <3
 
 <div>
-   <img src='https://live.staticflickr.com/65535/53143604786_66c66377e6_c.jpg' width='500'>
-   <img src='https://live.staticflickr.com/65535/53143608576_323e9e2b61_c.jpg' width='93'>
+   <img src='https://live.staticflickr.com/65535/53156426805_174729fb1f_h.jpg' width='400'>
+   <img src='https://live.staticflickr.com/65535/53156000426_83b3ab8876_z.jpg' width='107'>
+</div>
+<div>
+   <img src='https://live.staticflickr.com/65535/53156199049_d32bae4a56_h.jpg' width='400'>
+   <img src='https://live.staticflickr.com/65535/53156199044_a106fec6f7_z.jpg' width='107'>
 </div>
   
 ## 🤖 How do I start the project?
