@@ -15,7 +15,7 @@ export function NewTask(){
     const [tasks, setTasks] = useState<taskFormat[]>([]);
     const [taskText, setTaskText] = useState('')
     
-    const [checkboxStatus, setCheckboxStatus] = useState(0) 
+    const [taskStatus, setTaskStatus] = useState(0) 
 
     function handeTaskText(event: ChangeEvent<HTMLInputElement>) {
         setTaskText(event.target.value)
@@ -39,7 +39,19 @@ export function NewTask(){
     }
 
     function handleDoneTask(done: boolean) {
-        done ? setCheckboxStatus(checkboxStatus + 1) : setCheckboxStatus(checkboxStatus - 1)
+        done ? setTaskStatus(taskStatus + 1) : setTaskStatus(taskStatus - 1)
+    }
+
+    function handleDeleteTask(id: number, done: boolean) {
+        const tasksNoDeleted = tasks.filter(task => {
+            return task.id !== id;
+        })
+
+        setTasks(tasksNoDeleted);
+        
+        if(done) {
+            setTaskStatus(taskStatus - 1)
+        }
     }
 
     return (
@@ -51,14 +63,14 @@ export function NewTask(){
 
             <div className={styles.statusTasks}>
                 <p className={styles.textBlue}>Tarefas criadas <span>{tasks.length}</span></p>
-                <p className={styles.textPurple}>Concluidas <span>{checkboxStatus} de {tasks.length}</span></p>
+                <p className={styles.textPurple}>Concluidas <span>{taskStatus} de {tasks.length}</span></p>
             </div>
 
             <div className={styles.taskList}>
                 {
                     tasks.map((task) => {
                         if(tasks.length > 0) {
-                            return <TaskList key={task.id} id={task.id} task={task.task} onChangeDoneTask={handleDoneTask}/>
+                            return <TaskList key={task.id} id={task.id} task={task.task} onChangeDoneTask={handleDoneTask} onDelete={handleDeleteTask}/>
                         }
                     })
                 }

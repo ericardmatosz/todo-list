@@ -51,12 +51,21 @@
     }
 
     .delete {
-        height: 24px;
-        width: 24px;
+        height: 25px;
+        width: 25px;
         background: none;
         color: $gray-300;
         border: none;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: $danger;
+            background-color: $gray-400;
+            border-radius: 8px;
+        }
     }
 
     & + .taskListing {

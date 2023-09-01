@@ -7,15 +7,20 @@ interface taskListPros {
     id: number;
     task: string;
     onChangeDoneTask: (status: boolean) => void;
+    onDelete: (id: number, doneTask: boolean) => void;
 }
 
-export function TaskList({id, task, onChangeDoneTask } : taskListPros ) {
+export function TaskList({id, task, onChangeDoneTask, onDelete } : taskListPros ) {
 
     const [statusTask, setStatusTask] = useState(false)
 
     function doneTask(event: ChangeEvent<HTMLInputElement>) {
         setStatusTask(event.target.checked)
         onChangeDoneTask(event.target.checked)
+    }
+
+    function deleteTask() {
+        onDelete(id, statusTask)
     }
     
     return (
@@ -25,7 +30,7 @@ export function TaskList({id, task, onChangeDoneTask } : taskListPros ) {
                 <label htmlFor={id.toString()}></label>
                 <p className={statusTask === true ? (styles.done) : 'i'}>{task}</p>
             </div>
-            <button className={styles.delete}><Trash size={20} /></button>
+            <button onClick={deleteTask} className={styles.delete}><Trash size={20} /></button>
         </div>
     )
 }
