@@ -1,3 +1,4 @@
+// Styles and icons imports
 import styles from './Header.module.scss';
 import rocket from '../../assets/rocket.svg'
 
