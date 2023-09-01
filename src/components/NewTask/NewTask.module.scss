@@ -1,6 +1,6 @@
 @import '../src/styles/colors.scss';
 
-.newTask {
+.tasks {
     form {
         display: flex;
         justify-content: center;
@@ -75,5 +75,11 @@
                 margin-left: 3px;
             }
         }
+    }
+
+    .taskList {
+        max-width: 45.6rem;
+        margin: 0 auto;
+        margin-top: 1.5rem;
     }
 }
