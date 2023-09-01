@@ -1,5 +1,5 @@
 import styles from './NewTask.module.scss';
-import { PlusCircle } from '@phosphor-icons/react'
+import { PlusCircle, ClipboardText } from '@phosphor-icons/react'
 import { TaskList } from '../TaskList/TaskList'
 import { useState } from 'react';
 
@@ -64,6 +64,12 @@ export function NewTask(){
             <div className={styles.statusTasks}>
                 <p className={styles.textBlue}>Tarefas criadas <span>{tasks.length}</span></p>
                 <p className={styles.textPurple}>Concluidas <span>{taskStatus} de {tasks.length}</span></p>
+            </div>
+
+            <div className={tasks.length > 0 ? styles.withoutTask : styles.haveTask}>
+                <ClipboardText size={56} />
+                <strong>Você ainda não tem tarefas</strong>
+                <p>Cria tarefas e organize seus itens a fazer</p>
             </div>
 
             <div className={styles.taskList}>
