@@ -1,12 +1,16 @@
 @import '../src/styles/colors.scss';
 
 .tasks {
+    @media(max-width:768px) {
+        padding: 0 1rem;
+    }
+    
     form {
         display: flex;
         justify-content: center;
         gap: 7px;
-        margin-top: calc(0px - 1.5rem - 6px);
-        
+        margin-top: calc(0px - 1.5rem - 6px); 
+
         input[type='text'] {
             height: 3.375rem;
             width: 39.875rem;
@@ -14,6 +18,10 @@
             border: 1px solid $gray-700;
             border-radius: 8px;
             background-color: $gray-500;
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }    
 
             &:focus {
                 color: $gray-100;
@@ -78,16 +86,16 @@
         }
     }
 
-    .withoutTask {
+    .haveTask {
         visibility: hidden;
         max-height: 0;
     }
 
-    .haveTask {
+    .withoutTask {
         max-width: 45.6rem;
         margin: 2rem auto 0 auto;
         border-top: 1px solid $gray-400;
-        padding: 3rem;
+        padding: 3rem 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
