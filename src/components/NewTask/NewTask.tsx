@@ -87,7 +87,7 @@ export function NewTask(){
                 </p>
             </div>
 
-            <div className={tasks.length > 0 ? styles.withoutTask : styles.haveTask}>
+            <div className={tasks.length > 0 ? styles.haveTask : styles.withoutTask}>
                 <ClipboardText size={56} />
                 <strong>Você ainda não tem tarefas</strong>
                 <p>Cria tarefas e organize seus itens a fazer</p>
