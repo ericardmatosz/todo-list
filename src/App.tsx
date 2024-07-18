@@ -1,11 +1,9 @@
-// Components Imports
-import { Header } from './components/Header/Header'
-import { NewTask } from './components/NewTask/NewTask'
+import { Header } from "./components/Header";
+import { NewTask } from "./components/NewTask/NewTask";
 
-// Styles Imports
-import './App.scss'
-import './styles/colors.scss'
-import './styles/global.scss'
+import "./App.scss";
+import "./styles/colors.scss";
+import "./styles/global.scss";
 
 function App() {
   return (
@@ -13,7 +11,7 @@ function App() {
       <Header />
       <NewTask />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
