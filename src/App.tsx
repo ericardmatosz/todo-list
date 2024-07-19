@@ -1,5 +1,5 @@
 import { Header } from "./components/Header";
-import { NewTask } from "./components/NewTask/NewTask";
+import { NewTask } from "./components/NewTask";
 
 import "./App.scss";
 import "./styles/colors.scss";
